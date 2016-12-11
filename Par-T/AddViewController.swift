@@ -44,44 +44,6 @@ class AddViewController: UIViewController {
         
    
         
-      
-        
-        //Getting our model object from the text fields entered in
-        /* let newParty : Party = Party(name: EventTitleField.text! , address : AddressField.text!, startDate : DateSelect.date , id : UUID().uuidString)
-        
-          let encodedData = NSKeyedArchiver.archivedData(withRootObject: newParty) //Turn it into NSData so that we can put it into UserDefaults
-        
-        let dataSet : NSMutableDictionary = NSMutableDictionary()
-        dataSet.setObject(encodedData, forKey: "party" as NSCopying)
-        
-        if (eventList != nil){ //Adding something new on top of existing items
-            let newList : NSMutableArray = NSMutableArray()
-            
-            for dict:Any in eventList!{
-            newList.add(dict as! NSDictionary)
-            
-            }
-            
-            userDefaults.removeObject(forKey: "partylist")
-            newList.add(dataSet)
-            
-            userDefaults.set(newList, forKey: "partylist")
-        
-        
-        
-        
-        } //First item in the list
-        else {
-        eventList = NSMutableArray()
-        eventList!.add(dataSet)
-        
-            userDefaults.set(eventList, forKey: "partylist")
-        
-        } */
-        
-       // userDefaults.synchronize()
-        
-        
         dismiss(animated: true, completion: nil)
         
     }

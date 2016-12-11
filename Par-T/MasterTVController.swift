@@ -9,9 +9,14 @@
 import UIKit
 
 class MasterTVController: UITableViewController {
-    
+
+        let persistance = Persistance()
+
     let cellIdentifier = "partyCell"
     var parties:[Party]?
+    
+    
+    
 
     override func viewDidAppear(_ animated: Bool) {
         
@@ -28,6 +33,10 @@ class MasterTVController: UITableViewController {
         super.viewDidLoad()
         //self.tableView.register(UINib(nibName: "PartyCell", bundle: nil), forCellReuseIdentifier: "Cell")
 
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        parties = persistance.fetchParties()
+
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -49,6 +58,7 @@ class MasterTVController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        parties = persistance.fetchParties()
         return parties?.count ?? 0
     }
 
@@ -61,17 +71,18 @@ class MasterTVController: UITableViewController {
 
         // Configure the cell...
         
+        parties? = persistance.fetchParties()
+        
         if let parties = parties {
             let party = parties[indexPath.row]
             
-            cell.textLabel?.text = "\(String(party.name)) - \(party.startDate)"}
+            //cell.textLabel?.text = "\(String(party.name)) - \(party.startDate)"
+            //cell.textLabel?.text = (String(party.name)) + (String(party.address))
+            cell.textLabel?.text = "\(party.name) - \(party.startDate)"
+            
+
+        }
         
-        //NO NO NO 
-        //let partyItem:NSDictionary = partyItems.object(at: indexPath.row) as! NSDictionary
-        
-        //cell.textLabel?.text = partyItem.object(forKey: "name" + "date") as! String?
-        
-        //cell.text = partyItem.object(forKey: "party") as! String?
 
         return cell
     }
