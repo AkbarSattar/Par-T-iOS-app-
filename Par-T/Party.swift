@@ -8,9 +8,13 @@
 
 import Foundation
 
+
+
 class Party: NSObject,NSCoding{
 
     var name: String = ""
+    
+    
    
     
     var address: String = ""
@@ -53,6 +57,8 @@ class Party: NSObject,NSCoding{
         self.startDate = startDate
         
         }
+    
+    
     
     
     

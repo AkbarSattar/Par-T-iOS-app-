@@ -58,7 +58,7 @@ class MasterTVController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        parties = persistance.fetchParties()
+        parties = persistance.fetchParties() //Gets the amount of parties and makes the proper number of cells
         return parties?.count ?? 0
     }
 
@@ -87,6 +87,7 @@ class MasterTVController: UITableViewController {
         return cell
     }
     
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -123,14 +124,28 @@ class MasterTVController: UITableViewController {
     }
     */
 
-    /*
+   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        parties? = persistance.fetchParties() //Get the parties
+
+        if (segue.identifier == "SegwayFromCell"){
+            
+            let selectedIndexPath:IndexPath = self.tableView.indexPathForSelectedRow! // Find What row we're on
+            let mapViewController:MapViewController = segue.destination as! MapViewController
+            //Set the destination to MapViewController
+            let theParty:Party = parties![selectedIndexPath.row]
+            //Get the party stored at the row we're on
+            
+            mapViewController.partyData = theParty //Send our party over to MapViewController
+            
+        }
+        
     }
-    */
+    
 
 }
