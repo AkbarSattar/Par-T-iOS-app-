@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF0890FA1DFB75310088D676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0890F91DFB75310088D676 /* AppDelegate.swift */; };
+		BF0890FC1DFB75310088D676 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0890FB1DFB75310088D676 /* ViewController.swift */; };
+		BF0890FF1DFB75310088D676 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0890FD1DFB75310088D676 /* Main.storyboard */; };
+		BF0891011DFB75310088D676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0891001DFB75310088D676 /* Assets.xcassets */; };
+		BF0891041DFB75310088D676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0891021DFB75310088D676 /* LaunchScreen.storyboard */; };
+		BF08910E1DFB7BF00088D676 /* MasterTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08910D1DFB7BF00088D676 /* MasterTVController.swift */; };
+		BF0891101DFB7C590088D676 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08910F1DFB7C590088D676 /* AddViewController.swift */; };
+		BF0891121DFB7CB40088D676 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0891111DFB7CB40088D676 /* MapViewController.swift */; };
+		BF0891141DFB87ED0088D676 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0891131DFB87ED0088D676 /* Party.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BF0890F61DFB75310088D676 /* Par-T.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Par-T.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0890F91DFB75310088D676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF0890FB1DFB75310088D676 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF0890FE1DFB75310088D676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF0891001DFB75310088D676 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF0891031DFB75310088D676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF0891051DFB75310088D676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF08910D1DFB7BF00088D676 /* MasterTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTVController.swift; sourceTree = "<group>"; };
+		BF08910F1DFB7C590088D676 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		BF0891111DFB7CB40088D676 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BF0891131DFB87ED0088D676 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF0890F31DFB75310088D676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF0890ED1DFB75310088D676 = {
+			isa = PBXGroup;
+			children = (
+				BF0890F81DFB75310088D676 /* Par-T */,
+				BF0890F71DFB75310088D676 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF0890F71DFB75310088D676 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF0890F61DFB75310088D676 /* Par-T.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF0890F81DFB75310088D676 /* Par-T */ = {
+			isa = PBXGroup;
+			children = (
+				BF0890F91DFB75310088D676 /* AppDelegate.swift */,
+				BF08910D1DFB7BF00088D676 /* MasterTVController.swift */,
+				BF08910F1DFB7C590088D676 /* AddViewController.swift */,
+				BF0891111DFB7CB40088D676 /* MapViewController.swift */,
+				BF0890FB1DFB75310088D676 /* ViewController.swift */,
+				BF0891131DFB87ED0088D676 /* Party.swift */,
+				BF0890FD1DFB75310088D676 /* Main.storyboard */,
+				BF0891001DFB75310088D676 /* Assets.xcassets */,
+				BF0891021DFB75310088D676 /* LaunchScreen.storyboard */,
+				BF0891051DFB75310088D676 /* Info.plist */,
+			);
+			path = "Par-T";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF0890F51DFB75310088D676 /* Par-T */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF0891081DFB75310088D676 /* Build configuration list for PBXNativeTarget "Par-T" */;
+			buildPhases = (
+				BF0890F21DFB75310088D676 /* Sources */,
+				BF0890F31DFB75310088D676 /* Frameworks */,
+				BF0890F41DFB75310088D676 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Par-T";
+			productName = "Par-T";
+			productReference = BF0890F61DFB75310088D676 /* Par-T.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF0890EE1DFB75310088D676 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Akbar Sattar";
+				TargetAttributes = {
+					BF0890F51DFB75310088D676 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BF0890F11DFB75310088D676 /* Build configuration list for PBXProject "Par-T" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF0890ED1DFB75310088D676;
+			productRefGroup = BF0890F71DFB75310088D676 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF0890F51DFB75310088D676 /* Par-T */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF0890F41DFB75310088D676 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0891041DFB75310088D676 /* LaunchScreen.storyboard in Resources */,
+				BF0891011DFB75310088D676 /* Assets.xcassets in Resources */,
+				BF0890FF1DFB75310088D676 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF0890F21DFB75310088D676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0890FC1DFB75310088D676 /* ViewController.swift in Sources */,
+				BF08910E1DFB7BF00088D676 /* MasterTVController.swift in Sources */,
+				BF0891101DFB7C590088D676 /* AddViewController.swift in Sources */,
+				BF0891121DFB7CB40088D676 /* MapViewController.swift in Sources */,
+				BF0891141DFB87ED0088D676 /* Party.swift in Sources */,
+				BF0890FA1DFB75310088D676 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF0890FD1DFB75310088D676 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF0890FE1DFB75310088D676 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF0891021DFB75310088D676 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF0891031DFB75310088D676 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF0891061DFB75310088D676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF0891071DFB75310088D676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF0891091DFB75310088D676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Par-T/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.akbarsattar.Par-T";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BF08910A1DFB75310088D676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Par-T/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.akbarsattar.Par-T";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF0890F11DFB75310088D676 /* Build configuration list for PBXProject "Par-T" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF0891061DFB75310088D676 /* Debug */,
+				BF0891071DFB75310088D676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF0891081DFB75310088D676 /* Build configuration list for PBXNativeTarget "Par-T" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF0891091DFB75310088D676 /* Debug */,
+				BF08910A1DFB75310088D676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF0890EE1DFB75310088D676 /* Project object */;
+}
