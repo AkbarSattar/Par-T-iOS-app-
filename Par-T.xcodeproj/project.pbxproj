@@ -16,6 +16,7 @@
 		BF0891101DFB7C590088D676 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08910F1DFB7C590088D676 /* AddViewController.swift */; };
 		BF0891121DFB7CB40088D676 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0891111DFB7CB40088D676 /* MapViewController.swift */; };
 		BF0891141DFB87ED0088D676 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0891131DFB87ED0088D676 /* Party.swift */; };
+		BF9C6BA41DFCFB880054E300 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C6BA31DFCFB880054E300 /* Persistance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BF08910F1DFB7C590088D676 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		BF0891111DFB7CB40088D676 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BF0891131DFB87ED0088D676 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
+		BF9C6BA31DFCFB880054E300 /* Persistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				BF0891111DFB7CB40088D676 /* MapViewController.swift */,
 				BF0890FB1DFB75310088D676 /* ViewController.swift */,
 				BF0891131DFB87ED0088D676 /* Party.swift */,
+				BF9C6BA31DFCFB880054E300 /* Persistance.swift */,
 				BF0890FD1DFB75310088D676 /* Main.storyboard */,
 				BF0891001DFB75310088D676 /* Assets.xcassets */,
 				BF0891021DFB75310088D676 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9C6BA41DFCFB880054E300 /* Persistance.swift in Sources */,
 				BF0890FC1DFB75310088D676 /* ViewController.swift in Sources */,
 				BF08910E1DFB7BF00088D676 /* MasterTVController.swift in Sources */,
 				BF0891101DFB7C590088D676 /* AddViewController.swift in Sources */,
@@ -313,6 +317,7 @@
 				BF08910A1DFB75310088D676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

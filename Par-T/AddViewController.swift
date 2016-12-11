@@ -11,6 +11,7 @@ import UIKit
 class AddViewController: UIViewController {
 
     @IBOutlet weak var EventTitleField: UITextField! //Title of the new party
+    let persistance = Persistance()
     
     @IBOutlet weak var EventLabel: UILabel!
     @IBOutlet weak var EventLabel2: UILabel!
@@ -35,22 +36,26 @@ class AddViewController: UIViewController {
     
     @IBAction func AddNewParty(_ sender: Any) {
         
-        var userDefaults:UserDefaults = UserDefaults.standard //Get what items we already have
         
-        var eventList:NSMutableArray? = userDefaults.object(forKey: "partylist") as? NSMutableArray
+        
+        let party = Party(name: EventTitleField.text!, address: AddressField.text!, startDate: DateSelect.date, id: UUID().uuidString)
+        
+        persistance.saveParty(party: party)
+        
+   
         
       
         
         //Getting our model object from the text fields entered in
-        var newParty : Party = Party(name: EventTitleField.text! , address : AddressField.text!, startDate : DateSelect.date , id : UUID().uuidString)
+        /* let newParty : Party = Party(name: EventTitleField.text! , address : AddressField.text!, startDate : DateSelect.date , id : UUID().uuidString)
         
           let encodedData = NSKeyedArchiver.archivedData(withRootObject: newParty) //Turn it into NSData so that we can put it into UserDefaults
         
-        var dataSet : NSMutableDictionary = NSMutableDictionary()
+        let dataSet : NSMutableDictionary = NSMutableDictionary()
         dataSet.setObject(encodedData, forKey: "party" as NSCopying)
         
         if (eventList != nil){ //Adding something new on top of existing items
-            var newList : NSMutableArray = NSMutableArray()
+            let newList : NSMutableArray = NSMutableArray()
             
             for dict:Any in eventList!{
             newList.add(dict as! NSDictionary)
@@ -72,9 +77,9 @@ class AddViewController: UIViewController {
         
             userDefaults.set(eventList, forKey: "partylist")
         
-        }
+        } */
         
-        userDefaults.synchronize()
+       // userDefaults.synchronize()
         
         
         dismiss(animated: true, completion: nil)

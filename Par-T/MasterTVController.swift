@@ -10,22 +10,23 @@ import UIKit
 
 class MasterTVController: UITableViewController {
     
-    var partyItems:NSMutableArray = NSMutableArray()
+    let cellIdentifier = "partyCell"
+    var parties:[Party]?
 
     override func viewDidAppear(_ animated: Bool) {
-        var userDefaults:UserDefaults = UserDefaults.standard //Get our User Defaults (Saved Data)
         
-       var eventListFromUD:NSMutableArray? = (userDefaults.object(forKey: "partylist") as? NSMutableArray)
         
-        if (eventListFromUD != nil){
-       partyItems = eventListFromUD!
         
-        }
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+
+        
+        
         self.tableView.reloadData() }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UINib(nibName: "PartyCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        //self.tableView.register(UINib(nibName: "PartyCell", bundle: nil), forCellReuseIdentifier: "Cell")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -48,7 +49,7 @@ class MasterTVController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return partyItems.count
+        return parties?.count ?? 0
     }
 
     
@@ -60,9 +61,15 @@ class MasterTVController: UITableViewController {
 
         // Configure the cell...
         
-        var partyItem:NSDictionary = partyItems.object(at: indexPath.row) as! NSDictionary
+        if let parties = parties {
+            let party = parties[indexPath.row]
+            
+            cell.textLabel?.text = "\(String(party.name)) - \(party.startDate)"}
         
-        cell.textLabel?.text = partyItem.object(forKey: "name" + "date") as! String?  
+        //NO NO NO 
+        //let partyItem:NSDictionary = partyItems.object(at: indexPath.row) as! NSDictionary
+        
+        //cell.textLabel?.text = partyItem.object(forKey: "name" + "date") as! String?
         
         //cell.text = partyItem.object(forKey: "party") as! String?
 

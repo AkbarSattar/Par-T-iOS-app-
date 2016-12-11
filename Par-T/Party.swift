@@ -58,9 +58,6 @@ class Party: NSObject,NSCoding{
     
     
     
-    
-    
-    
    /* void encodeWithCoder:(NSCoder *)encoder {
     //Encode properties, other class variables, etc
     [encoder encodeObject:self.name forKey:@"name"]
