@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Party: NSObject{
+class Party: NSObject,NSCoding{
 
     var name: String = ""
    

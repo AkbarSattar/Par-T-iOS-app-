@@ -76,8 +76,8 @@ class AddViewController: UIViewController {
         
         userDefaults.synchronize()
         
-        self.navigationController!.popToRootViewController(animated: true)
         
+        dismiss(animated: true, completion: nil)
         
     }
   

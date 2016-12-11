@@ -25,6 +25,7 @@ class MasterTVController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.register(UINib(nibName: "PartyCell", bundle: nil), forCellReuseIdentifier: "Cell")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -52,13 +53,16 @@ class MasterTVController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")! as UITableViewCell
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         // Configure the cell...
         
-        /* var partyItem:NSDictionary = partyItems.object(at: indexPath.row) as! NSDictionary
+        var partyItem:NSDictionary = partyItems.object(at: indexPath.row) as! NSDictionary
         
-        cell.textLabel?.text = partyItem.object(forKey: "name" + "date") as! String? */ 
+        cell.textLabel?.text = partyItem.object(forKey: "name" + "date") as! String?  
         
         //cell.text = partyItem.object(forKey: "party") as! String?
 

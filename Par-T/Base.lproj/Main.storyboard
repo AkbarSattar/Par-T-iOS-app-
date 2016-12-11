@@ -80,7 +80,6 @@
                                 <state key="normal" title="Add Event!"/>
                                 <connections>
                                     <action selector="AddNewParty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6a9-8H-31Z"/>
-                                    <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lqK-iK-5Bx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcu-bj-FOs">
