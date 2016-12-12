@@ -34,31 +34,42 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         
         MapView.delegate = self
         
-       // var coords = (lat: 0.0, long: 0.0)
-        
+        //Show the name, address, and date of the party on the bottom left corner
         EventNameField.text = partyData.name
         EventAddressField.text = partyData.address
         EventDateField.text = "\(partyData.startDate)"
         
+        //CLGeocoder
         locator.geocodeAddressString(EventAddressField.text!, completionHandler:{(placemarks, error) -> Void in
             if (error != nil){
+                
+            //If we can't find the address, show the party name but tell the user the location was not found
+            
                 self.EventNameField.text = self.partyData.name
-                self.EventAddressField.text = "Location not found"
+                self.EventAddressField.text = "Location not found, address invalid"
                 self.EventDateField.text = "\(self.partyData.startDate)"
                 
             } else {
+                
+            //If we CAN find the address, lets get some coordinates and place a point on them
             let placemark = placemarks? .first
             let coordinates = placemark?.location?.coordinate
             self.firstCoords = coordinates
+                
                 let annotation = MKPointAnnotation()
                 let centerCoordinate = CLLocationCoordinate2D(latitude: self.firstCoords.latitude, longitude: self.firstCoords.longitude)
+                
+                //Point is on the center of the found location
                 annotation.coordinate = centerCoordinate
+                
+                //Point will display a nametag that shows the name of the party
                 annotation.title = self.EventNameField.text
                 self.MapView.addAnnotation(annotation)
+                
+                //Zoom into where our point is
                 let showregion: MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(centerCoordinate, 500, 500)
                 self.MapView.setRegion(showregion, animated: true)
             

@@ -13,7 +13,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var EventTitleField: UITextField! //Title of the new party
     let persistance = Persistance()
     
-    @IBOutlet weak var EventLabel: UILabel!
+    @IBOutlet weak var EventLabel: UILabel! 
     @IBOutlet weak var EventLabel2: UILabel!
     
     @IBOutlet weak var EventLabel3: UILabel!
@@ -44,23 +44,24 @@ class AddViewController: UIViewController {
             
             // Let's make  sure the user entered something. If they didn't enter one of the two fields, it's going to cause an alert 
             
-            let alert = UIAlertController(title: "Alert", message: "Please make sure both name and venue are entered", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            let alert = UIAlertController(title: "Oops!", message: "Please make sure both name and venue are entered", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
 
         
         }else {
         //If both fields are entered, will add the party as requested
         
-            
+        
+        //Create a new party with our required data
         let party = Party(name: EventTitleField.text!, address: AddressField.text!, startDate: DateSelect.date, id: UUID().uuidString)
         
-
+        //Save it to UserDefaults
         persistance.saveParty(party: party)
         
    
-        
-            dismiss(animated: true, completion: nil)
+        //Dismiss the modal screen, get us back to our table
+        dismiss(animated: true, completion: nil)
         }
         
     }

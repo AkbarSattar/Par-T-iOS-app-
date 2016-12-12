@@ -13,8 +13,6 @@ import Foundation
 class Party: NSObject,NSCoding{
 
     var name: String = ""
-    
-    
    
     
     var address: String = ""
@@ -25,14 +23,7 @@ class Party: NSObject,NSCoding{
     var id = UUID().uuidString
     
     
-    
-   /*required init(coder decoder: NSCoder) {
-        name = String(decoder.decodeObject(forKey: "name") as! String)
-        address = String(decoder.decodeObject(forKey: "address") as! String)
-        id = Int(decoder.decodeObject(forKey: "id"))
-    } */
-    
-    
+//Make it so that the data can be stored to UserDefaults. Modified from the PushupApp
     required init(coder decoder: NSCoder) {
         self.name = decoder.decodeObject(forKey: "name") as? String ?? ""
         self.address = decoder.decodeObject(forKey: "address") as? String ?? ""
@@ -49,7 +40,7 @@ class Party: NSObject,NSCoding{
         
     }
     
-    
+ //Initalize
     init(name : String, address : String, startDate : Date, id : String){
         
         self.name = name
@@ -58,33 +49,7 @@ class Party: NSObject,NSCoding{
     }
     
     
-    
-    
-    
-    
-    
-    
-   /* void encodeWithCoder:(NSCoder *)encoder {
-    //Encode properties, other class variables, etc
-    [encoder encodeObject:self.name forKey:@"name"]
-    [encoder encodeObject:self.categoryName forKey:@"startDate"]
-    [encoder encodeObject:self.subCategoryName forKey:@"id"]
-    [encoder encodeObject:self.subCategoryName forKey:@"address"]
-    
-    }
-    
-    (id)initWithCoder:(NSCoder *)decoder {
-    if((self = [super init])) {
-    //decode properties, other class vars
-    self.question = [decoder decodeObjectForKey:@"name"];
-    self.categoryName = [decoder decodeObjectForKey:@"startDate"];
-    self.subCategoryName = [decoder decodeObjectForKey:@"id"];
-    self.subCategoryName = [decoder decodeObjectForKey:@"address"];
-    }
-    return self;
-    } */
 
-    
     
     
     }

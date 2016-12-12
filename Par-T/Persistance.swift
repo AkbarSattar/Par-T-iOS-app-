@@ -12,7 +12,6 @@ import Foundation
 
 class Persistance {
     
-   // let pushupCountsKey = "pushupCounts"
     let partiesKey = "parties"
     
     //Modified version of what we did in class, the pushup app's fetching and stuff
@@ -34,6 +33,7 @@ class Persistance {
         
         var parties = fetchParties()
         
+        //Instead of "appending" to add a new party, we remove it
         parties.remove(at: Int)
         
         let data = NSKeyedArchiver.archivedData(withRootObject: parties)
