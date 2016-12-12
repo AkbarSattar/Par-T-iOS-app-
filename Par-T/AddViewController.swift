@@ -45,7 +45,9 @@ class AddViewController: UIViewController {
             // Let's make  sure the user entered something. If they didn't enter one of the two fields, it's going to cause an alert 
             
             let alert = UIAlertController(title: "Oops!", message: "Please make sure both name and venue are entered", preferredStyle: UIAlertControllerStyle.alert)
+            
             alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+            
             self.present(alert, animated: true, completion: nil)
 
         
