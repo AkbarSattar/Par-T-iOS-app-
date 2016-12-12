@@ -33,18 +33,35 @@ class AddViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func cancelButton(_ sender: Any) {
+        //Close the modal if we hit Cancel
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func AddNewParty(_ sender: Any) {
         
+        if ((AddressField.text?.isEmpty)! || (EventTitleField.text?.isEmpty)!){
+            
+            // Let's make  sure the user entered something. If they didn't enter one of the two fields, it's going to cause an alert 
+            
+            let alert = UIAlertController(title: "Alert", message: "Please make sure both name and venue are entered", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+
         
+        }else {
+        //If both fields are entered, will add the party as requested
         
+            
         let party = Party(name: EventTitleField.text!, address: AddressField.text!, startDate: DateSelect.date, id: UUID().uuidString)
         
+
         persistance.saveParty(party: party)
         
    
         
-        dismiss(animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
+        }
         
     }
   

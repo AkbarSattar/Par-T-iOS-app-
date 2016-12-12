@@ -36,9 +36,9 @@ class Party: NSObject,NSCoding{
     required init(coder decoder: NSCoder) {
         self.name = decoder.decodeObject(forKey: "name") as? String ?? ""
         self.address = decoder.decodeObject(forKey: "address") as? String ?? ""
-        self.startDate = decoder.decodeObject(forKey: "date") as! Date
+        self.startDate = (decoder.decodeObject(forKey: "date") as? Date)!
         self.id = decoder.decodeObject(forKey: "id") as? String ?? ""
-
+        
     }
     
     func encode(with coder: NSCoder) {
@@ -46,17 +46,17 @@ class Party: NSObject,NSCoding{
         coder.encode(address, forKey: "address")
         coder.encode(startDate, forKey: "date")
         coder.encode(id, forKey: "id")
-
+        
     }
-
+    
     
     init(name : String, address : String, startDate : Date, id : String){
-    
+        
         self.name = name
         self.address = address
         self.startDate = startDate
-        
-        }
+    }
+    
     
     
     

@@ -76,9 +76,14 @@ class MasterTVController: UITableViewController {
         if let parties = parties {
             let party = parties[indexPath.row]
             
+            let formatter : DateFormatter = DateFormatter()
+            formatter.dateFormat = ("MM/dd/yy - h:mm a")
+            let dateString = formatter.string(from: party.startDate)
+            
+            
             //cell.textLabel?.text = "\(String(party.name)) - \(party.startDate)"
             //cell.textLabel?.text = (String(party.name)) + (String(party.address))
-            cell.textLabel?.text = "\(party.name) - \(party.startDate)"
+            cell.textLabel?.text = "\(party.name) - \(dateString)"
             
 
         }
@@ -97,17 +102,27 @@ class MasterTVController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        parties? = persistance.fetchParties()
+
         if editingStyle == .delete {
             // Delete the row from the data source
+                    
+            //Remove the party at current index row
+            persistance.removeParty(Int: indexPath.row)
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
+            self.tableView.reloadData()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+            
+            
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

@@ -15,12 +15,26 @@ class Persistance {
    // let pushupCountsKey = "pushupCounts"
     let partiesKey = "parties"
     
+    //Modified version of what we did in class, the pushup app's fetching and stuff
     func saveParty(party: Party) {
         let userDefaults = UserDefaults.standard
         
         var parties = fetchParties()
         
         parties.append(party)
+        
+        let data = NSKeyedArchiver.archivedData(withRootObject: parties)
+        userDefaults.set(data, forKey: partiesKey)
+        userDefaults.synchronize()
+    }
+    
+    //Remove Party takes in an int and deletes the party from userDefaults at given int
+    func removeParty(Int: Int) {
+        let userDefaults = UserDefaults.standard
+        
+        var parties = fetchParties()
+        
+        parties.remove(at: Int)
         
         let data = NSKeyedArchiver.archivedData(withRootObject: parties)
         userDefaults.set(data, forKey: partiesKey)
